@@ -1,0 +1,35 @@
+body
+{
+}
+
+#wrapper
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#main_menu ul
+{
+  font-weight: bold;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main_menu li
+{
+  float: left;
+  margin-right: 10px;
+}
+
+#content
+{
+  clear: both;
+}
+
+#footer
+{
+  font-size: 70%;
+}
+
