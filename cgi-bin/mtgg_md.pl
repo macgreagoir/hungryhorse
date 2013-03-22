@@ -10,13 +10,11 @@ use Text::Markdown 'markdown';
 my $cli = param('cli') ? 1 : 0;
 
 # default to the home page
-my $dirname = 'content';
 my $filename = 'home';
 
-# the page to generate
-$dirname = param 'key' if param('key');
-$filename = param 'value' if param('value');
-open my $fh, '<',  "../$dirname/$filename.md" or die;
+# the page in the md dir to generate
+$filename = param 'words' if param('words');
+open my $fh, '<',  "../md/$filename.md" or die;
 
 print header('text/html; charset=UTF-8') unless $cli;
 print markdown join "\n", <$fh>;
