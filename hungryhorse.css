@@ -47,3 +47,8 @@ body
   font-size: 70%;
 }
 
+.form_element
+{
+  clear: both;
+  float: left;
+}

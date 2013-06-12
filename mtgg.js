@@ -66,6 +66,10 @@ var mtgg = {
       words: "about",
       pic: "about",
     },
+    {
+      text: "Contact",
+      target: "contact",
+    },
   ],
 
   footer_markup: "<p>Created with Hungry Horse</p>",
@@ -96,7 +100,9 @@ $(document).ready(function(){
   // the function is declared in the mtgg object
   mtgg.loadContent = function(target, words, pic) {
     var src = "";
-    if (target !== undefined && words !== undefined) {
+    if (target === "contact") {
+      src = "cgi-bin/contact.pl";
+    } else if (target !== undefined && words !== undefined) {
       switch(target) {
         case "static":
           src = "static/" + words + ".html";
@@ -139,6 +145,7 @@ $(document).ready(function(){
     if (item.words !== undefined) {
       args += ", '" + item.words + "'";
     } else {
+      // stick in a placeholder in case we have a pic
       args += ", undefined";
     }
 
